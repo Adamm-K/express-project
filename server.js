@@ -3,7 +3,7 @@ const hbs = require('express-handlebars');
 const path = require('path');
 
 const app = express();
-app.engine('.hbs', hbs());
+app.engine('.hbs', hbs.engine());
 app.set('view engine', '.hbs');
 
 app.use(express.static(path.join(__dirname, '/public')));
